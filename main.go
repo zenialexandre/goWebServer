@@ -9,7 +9,7 @@ import (
 func main() {
 	var fileServer = http.FileServer(http.Dir("./static"))
 	http.Handle("/", fileServer)
-	http.HandleFunc("/forms", formHandler)
+	http.HandleFunc("/form", formHandler)
 	http.HandleFunc("/hello", helloHandler)
 
 	fmt.Println("Starting server at port 8080")
